@@ -1,6 +1,6 @@
 # Home
 
-## Hello, new student!
+## Hello, my name is Yana!
 
 ![](./images/week01/assignment-photo.jpg)
 
