@@ -1,10 +1,9 @@
-# Replace the text below to customize your site
-site_name: Your name - Fab Academy
-site_description: Fab Academy documentation site for Your Name
-site_author: Your name
-copyright: Copyright 2022 Your name - Creative Commons Attribution Non Commercial
+site_name: Յանա Նազարյան - Թվային արտադրություն
+site_description: Նախագծային ուսումնառության փաստաթղթավորման կայք Յանա Նազարյանի համար
+site_author: Յանա Նազարյան
+copyright: Հեղինակային իրավունք 2026 Յանա Նազարյան - Creative Commons Attribution Non Commercial
 
-site_url: http://fibasile.fabcloud.io/fabacademy-student-template/
+site_url: https://yananazaryan26-crypto.github.io/fab-academy-site/
 
 extra:
   # Set your own social media below (or remove)
