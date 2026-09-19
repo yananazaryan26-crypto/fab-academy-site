@@ -1,4 +1,4 @@
-site_name: Յանա Նազարյան - Թվային արտադրություն
+site_name: Յանա Նազարյան - ՖաբԴպրոց
 site_description: Նախագծային ուսումնառության փաստաթղթավորման կայք Յանա Նազարյանի համար
 site_author: Յանա Նազարյան
 copyright: Հեղինակային իրավունք 2026 Յանա Նազարյան - Creative Commons Attribution Non Commercial
@@ -56,4 +56,3 @@ nav:
   - Իմ մասին: about.md
   - Հանձնարարություններ: assignments/week01.md
   - Նախագծեր: projects.md
-ս
