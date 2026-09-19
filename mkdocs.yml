@@ -20,6 +20,7 @@ extra:
 
 theme:
   name: material
+  language: hy
   palette:
     # try other colors https://squidfunk.github.io/mkdocs-material/getting-started/#primary-colors
     primary: deep
