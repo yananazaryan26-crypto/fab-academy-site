@@ -1,61 +1,74 @@
-# 3. Computer Aided design
+### Շաբաթ 3:Համակարգչային տեսողություն և Արհեստական բանականության համեմատություն
 
-This week I worked on defining my final project idea and started to getting used to the documentation process.
+### Ո՞րն է ավելի լավ ծրագրավորում
+Ես փորձեցի տարբեր AI գործիքներ՝ ChatGPT, Claude, DeepSeek, Gemini և Copilot։ Նրանցից յուրաքանչյուրը կարող է գրել Python-ի կոդ, սակայն արդյունքները կարող են տարբեր լինել։
+* **ChatGPT**-ն ինձ օգնեց ստեղծել ժպիտ հայտնաբերող ծրագիր OpenCV գրադարանի միջոցով։ Այն նաև բացատրեց կոդի առանձին մասերը և օգնեց հասկանալ, թե ինչպես է աշխատում ծրագիրը։
+* **Claude**-ը նույնպես լավ է կոդ ստեղծելու և կոդի կառուցվածքը բացատրելու համար։
+* **DeepSeek**-ը հատկապես օգտակար է կոդի օրինակներ ստանալու համար։
+* **Gemini**-ը կարող է առաջարկել տարբեր լուծումներ և բացատրել ծրագրավորման քայլերը։
+* **Copilot**-ը հատկապես հարմար է, երբ արդեն աշխատում ենք կոդի խմբագրիչում, քանի որ կարող է առաջարկել կոդի շարունակություններ։
+* *Այսպիսով, ծրագրավորման համար տարբեր AI գործիքներ ունեն տարբեր առավելություններ:*
 
-## Research
+### Ո՞րն է ավելի լավ սովորեցնում/բացատրում
+Սովորելու և բացատրելու համար ինձ համար կարևոր էր, որ AI-ն ոչ միայն պատրաստի կոդ տա, այլ նաև պարզ ձևով բացատրի, թե ինչ է անում յուրաքանչյուր հատվածը։
+Իմ փորձի ընթացքում **ChatGPT**-ն ինձ համար հարմար էր, որովհետև կարող էի հարցնել նույնիսկ ամենապարզ հարցերը և ստանալ քայլ առ քայլ բացատրություն։ Օրինակ՝ ես կարողացա հասկանալ, թե ինչ է OpenCV-ն, ինչպես է բացվում տեսախցիկը և ինչպես է ծրագիրը հայտնաբերում դեմքն ու ժպիտը։
+Մյուս AI գործիքներն էլ կարող են լավ բացատրություններ տալ, սակայն բացատրությունների ձևը և մանրամասնությունը տարբեր են։
+Իմ նախագծի համար ես ավելի շատ օգտագործեցի ChatGPT-ն՝ սովորելու և հասկանալու համար, իսկ մյուս AI գործիքները կարող են օգտագործվել որպես լրացուցիչ տարբերակներ՝ պատասխանները և կոդի տարբեր լուծումները համեմատելու համար։
 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+---
 
-> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+## Ինչպես կառուցեցի ժպիտ հայտնաբերող ծրագիրը
+Ժպիտ հայտնաբերող ծրագիրը ստեղծելու համար օգտագործեցի Python, Thonny և OpenCV գրադարանը։
 
-## Useful links
+1. **Ընտրեցի ծրագրի գաղափարը**
+   Իմ նպատակն էր ստեղծել ծրագիր, որը համակարգչի տեսախցիկի միջոցով կճանաչի մարդու դեմքը և կհայտնաբերի՝ արդյոք մարդը ժպտում է։
 
-- [Jekyll](http://jekyll.org)
-- [Google](http://google.com)
-- [Markdown](https://en.wikipedia.org/wiki/Markdown)
+2. **Տեղադրեցի OpenCV-ն**
+   Սկզբում Thonny-ում տեղադրեցի OpenCV գրադարանը։ Այն անհրաժեշտ է, որպեսզի Python-ը կարողանա աշխատել տեսախցիկի և պատկերների հետ։ Այնուհետև ստուգեցի, որ OpenCV-ն ճիշտ է տեղադրված։
 
-## Code Example
+3. **Օգտագործեցի AI**
+   AI-ին խնդրեցի օգնել ստեղծել պարզ ժպիտ հայտնաբերող ծրագիր Python-ով և OpenCV-ով։ AI-ն առաջարկեց օգտագործել OpenCV-ի պատրաստի Haar Cascade մոդելները, որոնք օգտագործվում են դեմքի և ժպիտի հայտնաբերման համար։
 
-Use the three backticks to separate code.
+4. **Հայտնաբերեցի դեմքը**
+   Ծրագրում օգտագործեցի `haarcascade_frontalface_default.xml` մոդելը։ Այն տեսախցիկի պատկերի մեջ գտնում է մարդու դեմքը, և երբ դեմքը հայտնաբերվում է, դրա շուրջը ծրագիրը նկարում է ուղղանկյուն։
 
-```
-// the setup function runs once when you press reset or power the board
-void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
-}
+5. **Հայտնաբերեցի ժպիտը**
+   Այնուհետև օգտագործեցի `haarcascade_smile.xml` մոդելը։ Ծրագիրը սկզբում առանձնացնում է դեմքի հատվածը, իսկ հետո այդ հատվածի մեջ փնտրում է ժպիտ։ Եթե ժպիտ է հայտնաբերվում, էկրանին հայտնվում է *SMILE!* գրությունը և ժպիտի հատվածը նշվում է կանաչ ուղղանկյունով։
 
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
-}
-```
+6. **Փորձարկեցի ծրագիրը**
+   Ծրագիրն աշխատեցրեցի Thonny-ում և միացրեցի համակարգչի տեսախցիկը՝ ստուգելով թե՛ դեմքի, թե՛ ժպիտի ճանաչումը։
 
-## Gallery
+### Ծրագրի կոդը
+```python
+import cv2
 
-![](../images/sample-photo.jpg)
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+smile_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_smile.xml')
 
-## Video
+cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 
-### From Vimeo
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
 
-<iframe src="https://player.vimeo.com/video/10048961" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/10048961">Sound Waves</a> from <a href="https://vimeo.com/radarboy">George Gally (Radarboy)</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
 
-### From Youtube
+    for (x, y, w, h) in faces:
+        cv2.rectangle(frame, (x, y), (x+w, h+y), (255, 0, 0), 2)
+        roi_gray = gray[y:y+h, x:x+w]
+        roi_color = frame[y:y+h, x:x+w]
+        
+        smiles = smile_cascade.detectMultiScale(roi_gray, scaleFactor=1.8, minNeighbors=20)
+        for (sx, sy, sw, sh) in smiles:
+            cv2.rectangle(roi_color, (sx, sy), (sx+sw, sy+sh), (0, 255, 0), 2)
+            cv2.putText(frame, 'Smile!', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jjNgJFemlC4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    cv2.imshow('Smile Detector', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
-## 3D Models
+cap.release()
+cv2.destroyAllWindows()
 
-<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-    <a href="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Dita&#39;s Gown</a>
-    by <a href="https://sketchfab.com/francisbitontistudio?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Francis Bitonti Studio</a>
-    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-</p>
-</div>
