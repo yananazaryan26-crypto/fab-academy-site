@@ -20,7 +20,6 @@ extra:
 
 theme:
   name: material
-  language: hy
   palette:
     # try other colors https://squidfunk.github.io/mkdocs-material/getting-started/#primary-colors
     primary: deep
@@ -55,5 +54,5 @@ markdown_extensions:
 nav:
   - Բարի գալուստ իմ էջ: index.md
   - Իմ մասին: about.md
-  - Հանձնարարություններ: assignments/week01.md
-  - Նախագծեր: projects.md
+  - Հանձնարարություններ: assignments
+  - Նախագծեր: projects/final-project.md
