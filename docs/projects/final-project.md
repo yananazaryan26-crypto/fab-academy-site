@@ -1,87 +1,24 @@
-# Final Project
+##  Նախագծի միտք. Խելացի ծաղկաման (Smart Planter)
 
+### 1. Նախագծի գաղափարը և նպատակը
+Մերօրյա զբաղված առօրյայում մարդիկ հաճախ մոռանում են ժամանակին ջրել իրենց սենյակային բույսերը, կամ հակառակը՝ չափից շատ են ջրում, ինչի հետևանքով բույսերը չորանում կամ փչանում են։ 
+Այս նախագծի նպատակն է ստեղծել **«Խելացի ծաղկաման»**, որը հսկում է հողի խոնավությունը, վերլուծում միջավայրի պայմանները և տիրոջը ժամանակին տեղեկացնում, երբ բույսը ջրի կարիք ունի։
 
-This week I worked on defining my final project idea and started to getting used to the documentation process.
+### 2. Ինչ խնդիր է այն լուծում
+* **Առօրյա մոռացկոտություն:** Ազատում է տիրոջը ամեն օր հողը ձեռքով ստուգելու անհրաժեշտությունից։
+* **Բնության պահպանություն տանը:** Կանխում է բույսերի անժամանակ չորացումը կամ ավելորդ ջրելուց առաջացած վնասները՝ ապահովելով առողջ միջավայր կանաչ տարածքների համար։
 
-## Research
+### 3. Ինչպես է այն աշխատում (Աշխատանքի տրամաբանությունը)
+1. **Հողի խոնավության չափում:** Հատուկ սենսորը (Soil Moisture Sensor) անընդհատ կարդում է հողի խոնավության աստիճանը ծաղկամանում։
+2. **Տվյալների մշակում:** Միկրոկոնտրոլերը կամ համակարգը վերլուծում է ստացված տվյալները։
+3. **Ահազանգ և արձագանք:** 
+   * Եթե հողը չորանում է (խոնավությունը իջնում է նորմայից ցածր), համակարգը միացնում է լուսային ազդանշան (LED) կամ ուղարկում ծանուցում։
+   * (Կամ) Կարող է ակտիվանալ նաև ավտոմատ ջրելու փոքրիկ պոմպը (Mini Water Pump), որը հողին տալիս է անհրաժեշտ խոնավության չափաբաժին։
 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+### 4. Օգտագործվող գործիքներ և տեխնոլոգիաներ
+* **Ծրագրավորում:** Python / Arduino IDE
+* **Սարքավորումներ (Hardware):** Միկրոկոնտրոլեր, հողի խոնավության սենսոր, լուսային կամ ձայնային ինդիկատորներ։
+* **Դիզայն և հավաքում:** ՖԱԲ լաբորատորիայի գործիքների օգտագործմամբ ծաղկամանի կորպուսի նախագծում և տպագրություն/պատրաստում։
 
-> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-## 2D and 3D Modeling
-
-Add here your modeling and design.
-
-
-## Some other section
-
-This is an updated text.
-
-
-
-## Materials
-
-| Qty |  Description    |  Price  |           Link           | Notes  |
-|-----|-----------------|---------|--------------------------|--------|
-| 1   | Material one    |  22.00 $| http://amazon.com/test   |    Order many    |
-| 1   | Material two    |  22.00 $| http://amazon.com/test   |        |
-| 1   | Material three  |  22.00 $| http://amazon.com/test   |        |
-| 1   | Material five   |  22.00 $| http://amazon.com/test   |        |
-| 1   | Material eight  |  22.00 $| http://amazon.com/test   |        |
-| 1   | Material twelve |  22.00 $| http://amazon.com/test   |        |
-| 1   | Material eleven |  22.00 $| http://amazon.com/test   |        |
-
-## Useful links
-
-- [Jekyll](http://jekyll.org)
-- [Google](http://google.com)
-- [Markdown](https://en.wikipedia.org/wiki/Markdown)
-
-
-## Code Example
-
-Use the three backticks to separate code.
-
-```
-// the setup function runs once when you press reset or power the board
-void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
-}
-
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
-}
-```
-
-
-## Gallery
-
-![](../images/sample-photo.jpg)
-
-## Video
-
-### From Vimeo
-
-<iframe src="https://player.vimeo.com/video/10048961" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/10048961">Sound Waves</a> from <a href="https://vimeo.com/radarboy">George Gally (Radarboy)</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-### From Youtube
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jjNgJFemlC4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-## 3D Models
-
-<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-    <a href="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Dita&#39;s Gown</a>
-    by <a href="https://sketchfab.com/francisbitontistudio?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Francis Bitonti Studio</a>
-    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-</p>
-</div>
+### 5. Նախագծի արդյունքը
+Այս նախագծի միջոցով ստեղծվելու է աշխատող սարք, որը միավորում է էլեկտրոնիկան, ծրագրավորումը և ինժեներական դիզայնը՝ լուծելով մարդու առօրյայում բույսերի խնամքի հետ կապված կարևոր խնդիրը։
