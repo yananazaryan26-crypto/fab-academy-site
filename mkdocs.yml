@@ -54,5 +54,5 @@ markdown_extensions:
 nav:
   - Բարի գալուստ իմ էջ: index.md
   - Իմ մասին: about.md
-  - Հանձնարարություններ: assignments
+  - Հանձնարարություններ: assignments/
   - Նախագծեր: projects/final-project.md
