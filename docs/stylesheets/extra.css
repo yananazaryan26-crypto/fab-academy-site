@@ -220,3 +220,41 @@ body { overflow-x: hidden; }
 @media (max-width: 760px) {
   .hero { background-position: right -120px center; }
 }
+/* Armenian: strict sans, uppercase kept */
+:root {
+  --md-text-font-family: "Montserrat", "Arial", "Noto Sans Armenian", sans-serif;
+  --hero-btn-text: #ffffff;
+}
+.md-typeset .hero-eyebrow,
+.md-typeset .hero-title,
+.md-typeset .hero-btn,
+.md-typeset .block-title,
+.card-week {
+  text-transform: uppercase;
+}
+.md-typeset .hero-title { font-weight: 700; letter-spacing: 0.01em; }
+
+/* Header like Mohammed's: title left, tabs centered, search right */
+.md-header { position: sticky; }
+.md-tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.4rem;
+  background: transparent;
+  pointer-events: none;
+}
+.md-tabs__list {
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  pointer-events: auto;
+}
+.md-tabs__link {
+  margin-top: 0;
+  line-height: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
