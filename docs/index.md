@@ -24,18 +24,15 @@ hide:
 
 <section class="block" id="work-section">
 <h2 class="block-title" id="work">Հանձնարարություններ</h2>
-<div class="cards">
-<a class="card" href="assignments/week01/"><span class="card-week">Շաբաթ 01</span><span class="card-title">Սկզբունքներ և պրակտիկա</span></a>
-<a class="card" href="assignments/week02/"><span class="card-week">Շաբաթ 02</span><span class="card-title">Համակարգչային նախագծում (CAD)</span></a>
-<a class="card" href="assignments/week03/"><span class="card-week">Շաբաթ 03</span><span class="card-title">Համակարգչով կառավարվող կտրում</span></a>
-<a class="card" href="assignments/week04/"><span class="card-week">Շաբաթ 04</span><span class="card-title">Ներդրված ծրագրավորում</span></a>
-<a class="card" href="assignments/week05/"><span class="card-week">Շաբաթ 05</span><span class="card-title">3D սկանավորում և տպում</span></a>
-<a class="card" href="assignments/week06/"><span class="card-week">Շաբաթ 06</span><span class="card-title">Էլեկտրոնային դիզայն</span></a>
-<a class="card" href="assignments/week07/"><span class="card-week">Շաբաթ 07</span><span class="card-title">Համակարգչով կառավարվող մշակում</span></a>
-<a class="card" href="assignments/week08/"><span class="card-week">Շաբաթ 08</span><span class="card-title">Էլեկտրոնիկայի արտադրություն</span></a>
-<a class="card" href="assignments/week09/"><span class="card-week">Շաբաթ 09</span><span class="card-title">Մուտքային սարքեր</span></a>
-<a class="card" href="assignments/week10/"><span class="card-week">Շաբաթ 10</span><span class="card-title">Ելքային սարքեր</span></a>
-<a class="card" href="assignments/week11/"><span class="card-week">Շաբաթ 11</span><span class="card-title">Ցանց և կապ</span></a>
-<a class="card" href="assignments/week12/"><span class="card-week">Շաբաթ 12</span><span class="card-title">Մեքենայի նախագծում</span></a>
+  
+<div class="tiles">
+  <a class="tile" href="assignments/week01/" style="--img:url('images/week01.jpg')">
+    <span class="tile-week">Շաբաթ 1-2</span>
+    <span class="tile-title">Կայքի ստեղծում</span>
+  </a>
+  <a class="tile" href="assignments/week03/" style="--img:url('images/week03.jpg')">
+    <span class="tile-week">Շաբաթ 3</span>
+    <span class="tile-title">Ֆաբ լաբի ուսումնասիրություն</span>
+  </a>
 </div>
 </section>
