@@ -234,44 +234,13 @@ body { overflow-x: hidden; }
 }
 .md-typeset .hero-title { font-weight: 700; letter-spacing: 0.01em; }
 
-/* Header : title left, tabs centered, search right */
-.md-tabs {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  height: 2.4rem;
-  background: transparent;
-  pointer-events: none;
-}
-.md-tabs__list {
-  justify-content: center;
-  width: fit-content;
-  margin: 0 auto;
-  pointer-events: auto;
-}
-.md-tabs__link {
-  margin-top: 0;
-  line-height: 2.4rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.md-tabs[data-md-state="hidden"] { pointer-events: none; }
-.md-tabs[data-md-state="hidden"] .md-tabs__link {
-  opacity: 1 !important;
-  transform: none !important;
-}
-.md-tabs__link { opacity: 0.85; }
-.md-tabs__item--active .md-tabs__link,
-.md-tabs__link:hover { opacity: 1; }
 .md-typeset .hero-btn,
 .md-typeset .hero-title,
 .md-typeset .hero-eyebrow,
 .md-typeset .hero-name {
   font-family: "Montserrat", "Arial", "Noto Sans Armenian", sans-serif;
 }
+
 .md-typeset .hero-btn {
   font-weight: 700;
   letter-spacing: 0.08em;
