@@ -5,6 +5,9 @@ copyright: Հեղինակային իրավունք 2026 Յանա Նազարյա�
 
 site_url: https://yananazaryan26-crypto.github.io/fab-academy-site/
 
+extra_css:
+  - stylesheets/extra.css
+
 extra:
   # Set your own social media below (or remove)
   social:
@@ -21,12 +24,19 @@ extra:
 theme:
   name: material
   palette:
-    # try other colors https://squidfunk.github.io/mkdocs-material/getting-started/#primary-colors
-    primary: deep
-    accent: indigo
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Անցնել բաց թեմային
+    - scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Անցնել մուգ թեմային
   font:
-    # See available fonts at https://fonts.google.com/
-    text: Ubuntu
     code: Ubuntu Mono
   icon:
     logo: material/school
@@ -34,6 +44,8 @@ theme:
   features:
     - navigation.tabs
     - navigation.instant
+    - navigation.top
+    - search.suggest
 
 plugins:
   - search
