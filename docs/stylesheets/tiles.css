@@ -1,0 +1,59 @@
+/* Week tiles: full-width photo tiles, like Mohammed's assignments grid */
+.tiles {
+  position: relative;
+  left: 50%;
+  margin: 3rem 0 0 -50vw;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2px;
+  background: #fffff8;
+}
+
+.md-typeset a.tile {
+  --img: none;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: clamp(16rem, 28vw, 30rem);
+  padding: 2rem;
+  color: #ffffff;
+  background: var(--img) center / cover no-repeat #3d3e49;
+}
+
+/* dark, slightly blue layer over the photo; turns light blue on hover */
+.md-typeset a.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(34, 36, 50, 0.62);
+  transition: background 0.3s;
+}
+.md-typeset a.tile:hover::before,
+.md-typeset a.tile:focus-visible::before {
+  background: rgba(132, 139, 172, 0.92);
+}
+.md-typeset a.tile:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: -6px;
+}
+
+.tile-week {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d3d1c3;
+}
+.tile-title {
+  display: block;
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+}
