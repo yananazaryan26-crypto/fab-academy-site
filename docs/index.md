@@ -32,7 +32,7 @@ hide:
   </a>
   <a class="tile" href="assignments/week03/" style="--img:url('images/week03.jpg')">
     <span class="tile-week">Շաբաթ 3</span>
-    <span class="tile-title">Ֆաբ լաբի ուսումնասիրություն</span>
+    <span class="tile-title">ԱԲ-ի ուսումնասիրություն</span>
   </a>
 </div>
 </section>
