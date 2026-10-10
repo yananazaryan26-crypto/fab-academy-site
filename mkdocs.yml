@@ -25,18 +25,18 @@ extra:
 theme:
   name: material
   palette:
-    - scheme: default
-      primary: black
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Անցնել մուգ թեմային
     - scheme: slate
       primary: black
       accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Անցնել բաց թեմային
+    - scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Անցնել մուգ թեմային
   font:
     code: Ubuntu Mono
   icon:
