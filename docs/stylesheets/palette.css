@@ -114,3 +114,56 @@
 [data-md-color-scheme="slate"] .md-typeset a.tile:focus-visible { outline-color: #ffffff; }
 [data-md-color-scheme="slate"] .tile-week { color: #BDB4A7; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5); }
 [data-md-color-scheme="slate"] .tile-title { color: #ffffff; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55); }
+
+/* HEADER: always follows the mode (cream in light mode, near-black in dark mode) */
+.md-header,
+.md-tabs {
+  background-color: var(--site-head) !important;
+  color: var(--site-text) !important;
+}
+.md-header__title,
+.md-header__button,
+.md-header .md-icon,
+.md-tabs__link,
+.md-search__icon,
+.md-search__input {
+  color: var(--site-text) !important;
+}
+.md-search__input::placeholder { color: var(--site-muted) !important; opacity: 1; }
+.md-search__form { background-color: rgba(13, 13, 12, 0.07); }
+[data-md-color-scheme="slate"] .md-search__form { background-color: rgba(243, 239, 226, 0.1); }
+
+/* "About me" BAND: full-width taupe section that stands out, like NORD's "Raw textures" */
+.block:has(.links-row) {
+  position: relative;
+  left: 50%;
+  margin: 0 0 0 -50vw;
+  width: 100vw;
+  max-width: none;
+  padding: 4.5rem max(1.5rem, calc((100vw - 70rem) / 2)) 4.5rem;
+  background: #BDB4A7;
+}
+.md-typeset .block:has(.links-row) a.pill {
+  background: #0D0D0C;
+  color: #F3EFE2;
+  border-color: #0D0D0C;
+  text-decoration: none;
+}
+.md-typeset .block:has(.links-row) a.pill:hover,
+.md-typeset .block:has(.links-row) a.pill:focus-visible {
+  background: #3C3429;
+  border-color: #3C3429;
+  color: #F3EFE2;
+}
+[data-md-color-scheme="slate"] .block:has(.links-row) { background: #3C3429; }
+[data-md-color-scheme="slate"] .md-typeset .block:has(.links-row) a.pill {
+  background: #B7A694;
+  color: #0D0D0C;
+  border-color: #B7A694;
+}
+[data-md-color-scheme="slate"] .md-typeset .block:has(.links-row) a.pill:hover,
+[data-md-color-scheme="slate"] .md-typeset .block:has(.links-row) a.pill:focus-visible {
+  background: #BDB4A7;
+  border-color: #BDB4A7;
+  color: #0D0D0C;
+}
