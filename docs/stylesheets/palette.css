@@ -1,0 +1,101 @@
+/* Warm palette: cream, taupe, near-black. Load this file LAST in extra_css. */
+
+/*
+  #F3EFE2 page cream      #F3F1E3 light header / cards
+  #BDB4A7 #B9B1A6 #B7A694 taupe tones
+  #887867 mid taupe       #3C3429 dark brown      #0D0F0E near-black
+*/
+
+:root {
+  /* hero is always dark */
+  --hero-text: #F3EFE2;
+  --hero-muted: #B9B1A6;
+  --hero-btn: #3C3429;
+  --hero-btn-hover: #B7A694;
+  --hero-btn-text: #ffffff;
+}
+
+/* LIGHT mode */
+:root,
+[data-md-color-scheme="default"] {
+  --site-bg: #F3EFE2;
+  --site-head: #F3F1E3;
+  --site-text: #0D0F0E;
+  --site-muted: #3C3429;
+  --site-btn: #0D0F0E;
+  --site-btn-hover: #3C3429;
+  --site-btn-text: #F3EFE2;
+  --site-card: #F3F1E3;
+  --site-line: #B9B1A6;
+  --md-default-bg-color: #F3EFE2;
+  --md-default-fg-color: #0D0F0E;
+  --md-primary-fg-color: #F3F1E3;
+  --md-primary-bg-color: #0D0F0E;
+  --md-primary-bg-color--light: #3C3429;
+  --md-typeset-a-color: #3C3429;
+  --md-accent-fg-color: #887867;
+  --md-code-bg-color: #BDB4A7;
+  --md-code-fg-color: #0D0F0E;
+  --md-footer-bg-color: #0D0F0E;
+  --md-footer-bg-color--dark: #0D0F0E;
+  --md-footer-fg-color: #F3EFE2;
+  --md-footer-fg-color--light: #B9B1A6;
+}
+
+/* DARK mode */
+[data-md-color-scheme="slate"] {
+  --site-bg: #0D0F0E;
+  --site-head: #0D0F0E;
+  --site-text: #F3EFE2;
+  --site-muted: #B9B1A6;
+  --site-btn: #B7A694;
+  --site-btn-hover: #BDB4A7;
+  --site-btn-text: #0D0F0E;
+  --site-card: #3C3429;
+  --site-line: #887867;
+  --md-default-bg-color: #0D0F0E;
+  --md-default-bg-color--light: #3C3429;
+  --md-default-fg-color: #F3EFE2;
+  --md-primary-fg-color: #0D0F0E;
+  --md-primary-bg-color: #F3EFE2;
+  --md-primary-bg-color--light: #B9B1A6;
+  --md-typeset-a-color: #BDB4A7;
+  --md-accent-fg-color: #B7A694;
+  --md-code-bg-color: #3C3429;
+  --md-code-fg-color: #F3EFE2;
+}
+
+/* links inside paragraphs and lists get an underline so they stand out */
+.md-typeset p a,
+.md-typeset li a {
+  text-decoration: underline;
+  text-decoration-color: #887867;
+  text-underline-offset: 0.2em;
+}
+
+/* HERO: warm brown shade over the optional photo, near-black at the bottom */
+.hero {
+  background:
+    linear-gradient(180deg, rgba(60, 52, 41, 0.55) 0%, rgba(13, 15, 14, 0.94) 100%),
+    url("../images/hero.jpg") right center / auto 100% no-repeat #0D0F0E;
+}
+.md-typeset .hero-btn { border: 1px solid #887867; }
+.md-typeset .hero-btn:hover,
+.md-typeset .hero-btn:focus-visible {
+  color: #0D0F0E;
+  border-color: #B7A694;
+}
+
+/* old week cards (if still used) */
+.md-typeset a.card:hover { border-color: #887867; }
+
+/* WEEK TILES */
+.tiles { background: var(--site-line); }
+.md-typeset a.tile { background: #3C3429; }
+.md-typeset a.tile::before { background: rgba(13, 15, 14, 0.72); }
+.md-typeset a.tile:hover::before,
+.md-typeset a.tile:focus-visible::before { background: rgba(136, 120, 103, 0.6); }
+@media (hover: none) {
+  .md-typeset a.tile::before { background: rgba(13, 15, 14, 0.55); }
+}
+.tile-week { color: #BDB4A7; }
