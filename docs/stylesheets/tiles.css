@@ -1,4 +1,4 @@
-/* Week tiles: full-width photo tiles, like Mohammed's assignments grid */
+/* Week tiles: full-width photo tiles. Dark and gray by default, colorful on hover. */
 .tiles {
   position: relative;
   left: 50%;
@@ -14,31 +14,62 @@
   --img: none;
   position: relative;
   isolation: isolate;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   min-height: clamp(16rem, 28vw, 30rem);
   padding: 2rem;
   color: #ffffff;
-  background: var(--img) center / cover no-repeat #3d3e49;
+  background: #3d3e49;
 }
 
-/* dark, slightly blue layer over the photo; turns light blue on hover */
+/* layer 1: the photo, gray by default */
+.md-typeset a.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: var(--img) center / cover no-repeat;
+  filter: grayscale(1) brightness(0.9);
+  transform: scale(1);
+  transition: filter 0.4s, transform 0.6s;
+}
+
+/* layer 2: dark bluish shade, lightens on hover */
 .md-typeset a.tile::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: rgba(34, 36, 50, 0.62);
-  transition: background 0.3s;
+  background: rgba(24, 26, 40, 0.72);
+  transition: background 0.4s;
+}
+
+.md-typeset a.tile:hover::after,
+.md-typeset a.tile:focus-visible::after {
+  filter: none;
+  transform: scale(1.04);
 }
 .md-typeset a.tile:hover::before,
 .md-typeset a.tile:focus-visible::before {
-  background: rgba(132, 139, 172, 0.92);
+  /* raise the last number (up to 0.92) for a heavier blue like Mohammed's */
+  background: rgba(132, 139, 172, 0.55);
 }
 .md-typeset a.tile:focus-visible {
   outline: 3px solid #ffffff;
   outline-offset: -6px;
+}
+
+/* touch screens have no hover, so show the photo in color */
+@media (hover: none) {
+  .md-typeset a.tile::after { filter: none; }
+  .md-typeset a.tile::before { background: rgba(24, 26, 40, 0.55); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset a.tile::after,
+  .md-typeset a.tile::before { transition: none; }
 }
 
 .tile-week {
@@ -49,6 +80,7 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #d3d1c3;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
 }
 .tile-title {
   display: block;
@@ -56,4 +88,5 @@
   font-weight: 700;
   line-height: 1.25;
   color: #ffffff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
 }
