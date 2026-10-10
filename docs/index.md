@@ -26,11 +26,13 @@ hide:
 <h2 class="block-title" id="work">Հանձնարարություններ</h2>
   
 <div class="tiles">
-  <a class="tile" href="assignments/week01/" style="--img:url('images/week01.jpg')">
+  <a class="tile" href="assignments/week01/">
+    <img class="tile-img" src="images/week01.jpg" alt="">
     <span class="tile-week">Շաբաթ 1-2</span>
     <span class="tile-title">Կայքի ստեղծում</span>
   </a>
-  <a class="tile" href="assignments/week03/" style="--img:url('images/week03.jpg')">
+  <a class="tile" href="assignments/week03/">
+    <img class="tile-img" src="images/week03.jpg" alt="">
     <span class="tile-week">Շաբաթ 3</span>
     <span class="tile-title">ԱԲ-ի ուսումնասիրություն</span>
   </a>
