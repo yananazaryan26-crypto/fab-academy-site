@@ -8,7 +8,6 @@ site_url: https://yananazaryan26-crypto.github.io/fab-academy-site/
 extra_css:
   - stylesheets/extra.css
   - stylesheets/tiles.css
-  - stylesheets/palette.css
   
 extra:
   # Set your own social media below (or remove)
