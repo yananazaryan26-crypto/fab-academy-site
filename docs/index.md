@@ -7,7 +7,7 @@ hide:
 <section class="hero">
 <div class="hero-text">
 <p class="hero-eyebrow">Ֆաբ դպրոց 2026 · Փաստաթղթավորում</p>
-<h1 class="hero-title">Գաղափարից մինչև ստեղծագործություն</h1>
+<h1 class="hero-title">Գաղափար, որ ծնվում է տեսլականից</h1>
 <p class="hero-name">Յանա Նազարյան</p>
 <a class="hero-btn" href="#work">Դիտել հանձնարարությունները</a>
 </div>
