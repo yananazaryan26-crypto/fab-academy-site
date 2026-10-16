@@ -1,121 +1,83 @@
-/* Warm palette, LIGHT dominant (cream page, near-black text). Load this file LAST in extra_css. */
+/* Light-dominant design: Rothko tones + blue-gray accent. Load this file LAST in extra_css. */
 
 /*
-  #F3EFE2 page cream     #F3F1E3 header / cards
-  #BDB4A7 #B9B1A6 #B7A694 taupe tones
-  #887867 mid taupe      #3C3429 dark brown     #0D0D0C text
+  #E8E8DC page      #D3D1C3 cards      #D1CFC2 bands
+  #9D9B8E lines     #383933 dark brown-gray    #2E2F2A text
+  #5a6290 accent    #848bac light accent
 */
 
 :root {
-  /* hero (light) */
-  --hero-text: #0D0D0C;
-  --hero-muted: #3C3429;
-  --hero-btn: #0D0D0C;
-  --hero-btn-hover: #3C3429;
+  --hero-text: #2E2F2A;
+  --hero-muted: #383933;
+  --hero-btn: #5a6290;
+  --hero-btn-hover: #4a5280;
   --hero-btn-text: #ffffff;
 }
 
 /* LIGHT mode (main look) */
 :root,
 [data-md-color-scheme="default"] {
-  --site-bg: #F3EFE2;
-  --site-head: #F3F1E3;
-  --site-text: #0D0D0C;
-  --site-muted: #3C3429;
-  --site-btn: #0D0D0C;
-  --site-btn-hover: #3C3429;
-  --site-btn-text: #F3EFE2;
-  --site-card: #F3F1E3;
-  --site-line: #B9B1A6;
-  --md-default-bg-color: #F3EFE2;
-  --md-default-fg-color: #0D0D0C;
-  --md-primary-fg-color: #F3F1E3;
-  --md-primary-bg-color: #0D0D0C;
-  --md-primary-bg-color--light: #3C3429;
-  --md-typeset-a-color: #3C3429;
-  --md-accent-fg-color: #887867;
-  --md-code-bg-color: #BDB4A7;
-  --md-code-fg-color: #0D0D0C;
-  --md-footer-bg-color: #0D0D0C;
-  --md-footer-bg-color--dark: #0D0D0C;
-  --md-footer-fg-color: #F3EFE2;
-  --md-footer-fg-color--light: #B9B1A6;
+  --site-bg: #E8E8DC;
+  --site-head: #E8E8DC;
+  --site-text: #2E2F2A;
+  --site-muted: #383933;
+  --site-btn: #2E2F2A;
+  --site-btn-hover: #5a6290;
+  --site-btn-text: #E8E8DC;
+  --site-card: #D3D1C3;
+  --site-line: #9D9B8E;
+  --md-default-bg-color: #E8E8DC;
+  --md-default-fg-color: #2E2F2A;
+  --md-primary-fg-color: #E8E8DC;
+  --md-primary-bg-color: #2E2F2A;
+  --md-primary-bg-color--light: #383933;
+  --md-typeset-a-color: #5a6290;
+  --md-accent-fg-color: #5a6290;
+  --md-code-bg-color: #D3D1C3;
+  --md-code-fg-color: #2E2F2A;
+  --md-footer-bg-color: #2E2F2A;
+  --md-footer-bg-color--dark: #2E2F2A;
+  --md-footer-fg-color: #E8E8DC;
+  --md-footer-fg-color--light: #D3D1C3;
 }
 
 /* DARK mode (optional, via the toggle) */
 [data-md-color-scheme="slate"] {
-  --hero-text: #F3EFE2;
-  --hero-muted: #B9B1A6;
-  --hero-btn: #B7A694;
-  --hero-btn-hover: #BDB4A7;
-  --hero-btn-text: #0D0D0C;
-  --site-bg: #0D0D0C;
-  --site-head: #0D0D0C;
-  --site-text: #F3EFE2;
-  --site-muted: #B9B1A6;
-  --site-btn: #B7A694;
-  --site-btn-hover: #BDB4A7;
-  --site-btn-text: #0D0D0C;
-  --site-card: #3C3429;
-  --site-line: #887867;
-  --md-default-bg-color: #0D0D0C;
-  --md-default-bg-color--light: #3C3429;
-  --md-default-fg-color: #F3EFE2;
-  --md-primary-fg-color: #0D0D0C;
-  --md-primary-bg-color: #F3EFE2;
-  --md-primary-bg-color--light: #B9B1A6;
-  --md-typeset-a-color: #BDB4A7;
-  --md-accent-fg-color: #B7A694;
-  --md-code-bg-color: #3C3429;
-  --md-code-fg-color: #F3EFE2;
+  --hero-text: #E8E8DC;
+  --hero-muted: #D3D1C3;
+  --hero-btn: #848bac;
+  --hero-btn-hover: #9aa1c2;
+  --hero-btn-text: #2E2F2A;
+  --site-bg: #2E2F2A;
+  --site-head: #2E2F2A;
+  --site-text: #E8E8DC;
+  --site-muted: #D3D1C3;
+  --site-btn: #848bac;
+  --site-btn-hover: #9aa1c2;
+  --site-btn-text: #2E2F2A;
+  --site-card: #383933;
+  --site-line: #5f6169;
+  --md-default-bg-color: #2E2F2A;
+  --md-default-bg-color--light: #383933;
+  --md-default-fg-color: #E8E8DC;
+  --md-primary-fg-color: #2E2F2A;
+  --md-primary-bg-color: #E8E8DC;
+  --md-primary-bg-color--light: #D3D1C3;
+  --md-typeset-a-color: #a9b0d0;
+  --md-accent-fg-color: #848bac;
+  --md-code-bg-color: #383933;
+  --md-code-fg-color: #E8E8DC;
 }
 
 /* links inside paragraphs and lists get an underline */
 .md-typeset p a,
 .md-typeset li a {
   text-decoration: underline;
-  text-decoration-color: #887867;
+  text-decoration-color: #9D9B8E;
   text-underline-offset: 0.2em;
 }
 
-/* HERO: cream, the optional photo fades in from the right */
-.hero {
-  background:
-    linear-gradient(90deg, rgba(243, 239, 226, 0.97) 0%, rgba(243, 239, 226, 0.92) 55%, rgba(243, 239, 226, 0.4) 100%),
-    url("../images/hero.jpg") right center / auto 100% no-repeat #F3EFE2;
-}
-[data-md-color-scheme="slate"] .hero {
-  background:
-    linear-gradient(180deg, rgba(60, 52, 41, 0.55) 0%, rgba(13, 13, 12, 0.94) 100%),
-    url("../images/hero.jpg") right center / auto 100% no-repeat #0D0D0C;
-}
-
-/* old week cards (if still used) */
-.md-typeset a.card:hover { border-color: #887867; }
-
-/* WEEK TILES: light taupe over a gray photo; color on hover */
-.tiles { background: var(--site-line); }
-.md-typeset a.tile { background: #BDB4A7; color: #0D0D0C; }
-.md-typeset a.tile::before { background: rgba(189, 180, 167, 0.75); }
-.md-typeset a.tile:hover::before,
-.md-typeset a.tile:focus-visible::before { background: rgba(183, 166, 148, 0.55); }
-.md-typeset a.tile:focus-visible { outline-color: #0D0D0C; }
-.tile-week { color: #3C3429; text-shadow: none; }
-.tile-title { color: #0D0D0C; text-shadow: 0 0 14px rgba(243, 239, 226, 0.8); }
-@media (hover: none) {
-  .md-typeset a.tile::before { background: rgba(189, 180, 167, 0.6); }
-}
-
-/* tiles in dark mode */
-[data-md-color-scheme="slate"] .md-typeset a.tile { background: #3C3429; color: #ffffff; }
-[data-md-color-scheme="slate"] .md-typeset a.tile::before { background: rgba(13, 13, 12, 0.72); }
-[data-md-color-scheme="slate"] .md-typeset a.tile:hover::before,
-[data-md-color-scheme="slate"] .md-typeset a.tile:focus-visible::before { background: rgba(136, 120, 103, 0.6); }
-[data-md-color-scheme="slate"] .md-typeset a.tile:focus-visible { outline-color: #ffffff; }
-[data-md-color-scheme="slate"] .tile-week { color: #BDB4A7; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5); }
-[data-md-color-scheme="slate"] .tile-title { color: #ffffff; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55); }
-
-/* HEADER: always follows the mode (cream in light mode, near-black in dark mode) */
+/* HEADER follows the mode (cream in light, dark in dark) */
 .md-header,
 .md-tabs {
   background-color: var(--site-head) !important;
@@ -130,10 +92,36 @@
   color: var(--site-text) !important;
 }
 .md-search__input::placeholder { color: var(--site-muted) !important; opacity: 1; }
-.md-search__form { background-color: rgba(13, 13, 12, 0.07); }
-[data-md-color-scheme="slate"] .md-search__form { background-color: rgba(243, 239, 226, 0.1); }
+.md-search__form { background-color: rgba(46, 47, 42, 0.07); }
+[data-md-color-scheme="slate"] .md-search__form { background-color: rgba(232, 232, 220, 0.1); }
 
-/* "About me" BAND: full-width taupe section that stands out, like NORD's "Raw textures" */
+/* HERO: the hands image, text on top, hands stay free at the bottom */
+.hero {
+  min-height: max(34rem, 58vw);
+  place-items: start center;
+  align-content: start;
+  padding: clamp(2.5rem, 5vw, 4.5rem) 1.5rem 0;
+  background:
+    linear-gradient(180deg, rgba(232, 232, 220, 0.62) 0%, rgba(232, 232, 220, 0) 52%),
+    url("../images/hero.jpg") center bottom / cover no-repeat #E8E8DC;
+}
+[data-md-color-scheme="slate"] .hero {
+  background:
+    linear-gradient(180deg, rgba(46, 47, 42, 0.84) 0%, rgba(46, 47, 42, 0.95) 100%),
+    url("../images/hero.jpg") center bottom / cover no-repeat #2E2F2A;
+}
+.md-typeset .hero-title {
+  font-size: clamp(1.8rem, 4vw, 3.6rem);
+  font-weight: 700;
+}
+@media (max-width: 760px) {
+  .hero {
+    min-height: 40rem;
+    background-size: 100% 100%, auto 56%;
+  }
+}
+
+/* "About me" BAND */
 .block:has(.links-row) {
   position: relative;
   left: 50%;
@@ -141,29 +129,45 @@
   width: 100vw;
   max-width: none;
   padding: 4.5rem max(1.5rem, calc((100vw - 70rem) / 2)) 4.5rem;
-  background: #BDB4A7;
+  background: #D1CFC2;
 }
 .md-typeset .block:has(.links-row) a.pill {
-  background: #0D0D0C;
-  color: #F3EFE2;
-  border-color: #0D0D0C;
+  background: #2E2F2A;
+  color: #E8E8DC;
+  border-color: #2E2F2A;
   text-decoration: none;
 }
 .md-typeset .block:has(.links-row) a.pill:hover,
 .md-typeset .block:has(.links-row) a.pill:focus-visible {
-  background: #3C3429;
-  border-color: #3C3429;
-  color: #F3EFE2;
+  background: #5a6290;
+  border-color: #5a6290;
+  color: #ffffff;
 }
-[data-md-color-scheme="slate"] .block:has(.links-row) { background: #3C3429; }
+[data-md-color-scheme="slate"] .block:has(.links-row) { background: #383933; }
 [data-md-color-scheme="slate"] .md-typeset .block:has(.links-row) a.pill {
-  background: #B7A694;
-  color: #0D0D0C;
-  border-color: #B7A694;
+  background: #848bac;
+  color: #2E2F2A;
+  border-color: #848bac;
 }
-[data-md-color-scheme="slate"] .md-typeset .block:has(.links-row) a.pill:hover,
-[data-md-color-scheme="slate"] .md-typeset .block:has(.links-row) a.pill:focus-visible {
-  background: #BDB4A7;
-  border-color: #BDB4A7;
-  color: #0D0D0C;
+
+/* WEEK TILES: light shade over the photo (photos themselves are unchanged) */
+.tiles { background: var(--site-line); }
+.md-typeset a.tile { background: #D1CFC2; color: #2E2F2A; }
+.md-typeset a.tile::before { background: rgba(209, 207, 194, 0.74); }
+.md-typeset a.tile:hover::before,
+.md-typeset a.tile:focus-visible::before { background: rgba(132, 139, 172, 0.8); }
+.md-typeset a.tile:focus-visible { outline-color: #2E2F2A; }
+.tile-week { color: #383933; text-shadow: none; }
+.tile-title { color: #2E2F2A; text-shadow: 0 0 14px rgba(232, 232, 220, 0.8); }
+.md-typeset a.tile:hover .tile-week,
+.md-typeset a.tile:hover .tile-title,
+.md-typeset a.tile:focus-visible .tile-week,
+.md-typeset a.tile:focus-visible .tile-title { color: #ffffff; text-shadow: 0 1px 8px rgba(46, 47, 42, 0.5); }
+@media (hover: none) {
+  .md-typeset a.tile::before { background: rgba(209, 207, 194, 0.6); }
 }
+[data-md-color-scheme="slate"] .md-typeset a.tile { background: #383933; color: #ffffff; }
+[data-md-color-scheme="slate"] .md-typeset a.tile::before { background: rgba(46, 47, 42, 0.7); }
+[data-md-color-scheme="slate"] .md-typeset a.tile:focus-visible { outline-color: #ffffff; }
+[data-md-color-scheme="slate"] .tile-week { color: #D3D1C3; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5); }
+[data-md-color-scheme="slate"] .tile-title { color: #ffffff; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55); }
