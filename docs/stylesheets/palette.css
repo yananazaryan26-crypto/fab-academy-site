@@ -95,20 +95,20 @@
 .md-search__form { background-color: rgba(46, 47, 42, 0.07); }
 [data-md-color-scheme="slate"] .md-search__form { background-color: rgba(232, 232, 220, 0.1); }
 
-/* HERO: the hands image, text on top, hands stay free at the bottom */
+/* HERO: text on top, the bottom part is reserved for the hands so text never covers them */
 .hero {
-  min-height: max(34rem, 58vw);
+  min-height: 0;
   place-items: start center;
   align-content: start;
-  padding: clamp(2.5rem, 5vw, 4.5rem) 1.5rem 0;
+  padding: clamp(2rem, 4vw, 3.5rem) 1.5rem calc(30vw + 1rem);
   background:
     linear-gradient(180deg, rgba(232, 232, 220, 0.62) 0%, rgba(232, 232, 220, 0) 52%),
-    url("../images/hero.jpg") center bottom / cover no-repeat #E8E8DC;
+    url("../images/hero.jpg") center bottom / 100% auto no-repeat #EBE9DF;
 }
 [data-md-color-scheme="slate"] .hero {
   background:
     linear-gradient(180deg, rgba(46, 47, 42, 0.84) 0%, rgba(46, 47, 42, 0.95) 100%),
-    url("../images/hero.jpg") center bottom / cover no-repeat #2E2F2A;
+    url("../images/hero.jpg") center bottom / 100% auto no-repeat #2E2F2A;
 }
 .md-typeset .hero-title {
   font-size: clamp(1.8rem, 4vw, 3.6rem);
@@ -116,9 +116,10 @@
 }
 @media (max-width: 760px) {
   .hero {
-    min-height: 40rem;
-    background-size: 100% 100%, auto 56%;
+    padding-bottom: calc(48vw + 1rem);
+    background-size: 100% 100%, 160% auto;
   }
+  [data-md-color-scheme="slate"] .hero { background-size: 100% 100%, 160% auto; }
 }
 
 /* "About me" BAND */
