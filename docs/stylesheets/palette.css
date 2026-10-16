@@ -1,8 +1,8 @@
 /* Light-dominant design: Rothko tones + blue-gray accent. Load this file LAST in extra_css. */
 
 /*
-  #E8E8DC page      #D3D1C3 cards      #D1CFC2 bands
-  #9D9B8E lines     #383933 dark brown-gray    #2E2F2A text
+  #CDCBBE page      #D6D4C8 cards      #B8B6A9 bands
+  #8E8C7F lines     #383933 dark brown-gray    #2E2F2A text
   #5a6290 accent    #848bac light accent
 */
 
@@ -17,28 +17,28 @@
 /* LIGHT mode (main look) */
 :root,
 [data-md-color-scheme="default"] {
-  --site-bg: #E8E8DC;
-  --site-head: #E8E8DC;
+  --site-bg: #CDCBBE;
+  --site-head: #CDCBBE;
   --site-text: #2E2F2A;
   --site-muted: #383933;
   --site-btn: #2E2F2A;
-  --site-btn-hover: #5a6290;
-  --site-btn-text: #E8E8DC;
-  --site-card: #D3D1C3;
-  --site-line: #9D9B8E;
-  --md-default-bg-color: #E8E8DC;
+  --site-btn-hover: #4a5280;
+  --site-btn-text: #CDCBBE;
+  --site-card: #D6D4C8;
+  --site-line: #8E8C7F;
+  --md-default-bg-color: #CDCBBE;
   --md-default-fg-color: #2E2F2A;
-  --md-primary-fg-color: #E8E8DC;
+  --md-primary-fg-color: #CDCBBE;
   --md-primary-bg-color: #2E2F2A;
   --md-primary-bg-color--light: #383933;
-  --md-typeset-a-color: #5a6290;
-  --md-accent-fg-color: #5a6290;
-  --md-code-bg-color: #D3D1C3;
+  --md-typeset-a-color: #4a5280;
+  --md-accent-fg-color: #4a5280;
+  --md-code-bg-color: #D6D4C8;
   --md-code-fg-color: #2E2F2A;
   --md-footer-bg-color: #2E2F2A;
   --md-footer-bg-color--dark: #2E2F2A;
-  --md-footer-fg-color: #E8E8DC;
-  --md-footer-fg-color--light: #D3D1C3;
+  --md-footer-fg-color: #CDCBBE;
+  --md-footer-fg-color--light: #D6D4C8;
 }
 
 /* DARK mode (optional, via the toggle) */
@@ -93,7 +93,7 @@
 }
 .md-search__input::placeholder { color: var(--site-muted) !important; opacity: 1; }
 .md-search__form { background-color: rgba(46, 47, 42, 0.07); }
-[data-md-color-scheme="slate"] .md-search__form { background-color: rgba(232, 232, 220, 0.1); }
+[data-md-color-scheme="slate"] .md-search__form { background-color: rgba(205, 203, 190, 0.1); }
 
 /* HERO: text on top, the bottom part is reserved for the hands so text never covers them */
 .hero {
@@ -102,8 +102,10 @@
   align-content: start;
   padding: clamp(2rem, 4vw, 3.5rem) 1.5rem calc(30vw + 1rem);
   background:
-    linear-gradient(180deg, rgba(232, 232, 220, 0.62) 0%, rgba(232, 232, 220, 0) 52%),
-    url("../images/hero.jpg") center bottom / 100% auto no-repeat #EBE9DF;
+    linear-gradient(180deg, rgba(205, 203, 190, 0.62) 0%, rgba(205, 203, 190, 0) 52%),
+    linear-gradient(#E2E3DE, #E2E3DE),
+    url("../images/hero.jpg") center bottom / 100% auto no-repeat #CDCBBE;
+  background-blend-mode: normal, multiply, normal;
 }
 [data-md-color-scheme="slate"] .hero {
   background:
@@ -117,7 +119,7 @@
 @media (max-width: 760px) {
   .hero {
     padding-bottom: calc(48vw + 1rem);
-    background-size: 100% 100%, 160% auto;
+    background-size: 100% 100%, 100% 100%, 160% auto;
   }
   [data-md-color-scheme="slate"] .hero { background-size: 100% 100%, 160% auto; }
 }
@@ -130,11 +132,11 @@
   width: 100vw;
   max-width: none;
   padding: 4.5rem max(1.5rem, calc((100vw - 70rem) / 2)) 4.5rem;
-  background: #D1CFC2;
+  background: #B8B6A9;
 }
 .md-typeset .block:has(.links-row) a.pill {
   background: #2E2F2A;
-  color: #E8E8DC;
+  color: #CDCBBE;
   border-color: #2E2F2A;
   text-decoration: none;
 }
@@ -153,19 +155,19 @@
 
 /* WEEK TILES: light shade over the photo (photos themselves are unchanged) */
 .tiles { background: var(--site-line); }
-.md-typeset a.tile { background: #D1CFC2; color: #2E2F2A; }
-.md-typeset a.tile::before { background: rgba(209, 207, 194, 0.74); }
+.md-typeset a.tile { background: #D6D4C8; color: #2E2F2A; }
+.md-typeset a.tile::before { background: rgba(214, 212, 200, 0.74); }
 .md-typeset a.tile:hover::before,
 .md-typeset a.tile:focus-visible::before { background: rgba(132, 139, 172, 0.8); }
 .md-typeset a.tile:focus-visible { outline-color: #2E2F2A; }
 .tile-week { color: #383933; text-shadow: none; }
-.tile-title { color: #2E2F2A; text-shadow: 0 0 14px rgba(232, 232, 220, 0.8); }
+.tile-title { color: #2E2F2A; text-shadow: 0 0 14px rgba(205, 203, 190, 0.8); }
 .md-typeset a.tile:hover .tile-week,
 .md-typeset a.tile:hover .tile-title,
 .md-typeset a.tile:focus-visible .tile-week,
 .md-typeset a.tile:focus-visible .tile-title { color: #ffffff; text-shadow: 0 1px 8px rgba(46, 47, 42, 0.5); }
 @media (hover: none) {
-  .md-typeset a.tile::before { background: rgba(209, 207, 194, 0.6); }
+  .md-typeset a.tile::before { background: rgba(214, 212, 200, 0.6); }
 }
 [data-md-color-scheme="slate"] .md-typeset a.tile { background: #383933; color: #ffffff; }
 [data-md-color-scheme="slate"] .md-typeset a.tile::before { background: rgba(46, 47, 42, 0.7); }
