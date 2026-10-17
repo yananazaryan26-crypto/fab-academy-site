@@ -25,6 +25,8 @@ extra:
 
 theme:
   name: material
+  logo: images/logo.png
+  favicon: images/logo.png
   palette:
     - scheme: default
       primary: black
