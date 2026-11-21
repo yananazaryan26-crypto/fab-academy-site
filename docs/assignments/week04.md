@@ -1,61 +1,72 @@
-# 4. Computer controlled cutting
+# Շաբաթ 4:Computer-Aided Design: 3D Պարամետրական Մոդելավորում (FreeCAD)
 
-This week I worked on defining my final project idea and started to getting used to the documentation process.
+Այս շաբաթ ես աշխատել եմ 3D համակարգչային նախագծման (CAD) ծրագրի՝ **FreeCAD 1.1.4**-ի հետ։ Իմ նպատակն էր ստեղծել եռաչափ, լիովին պարամետրական մոդել, որը բաղկացած է միմյանց մեջ հավաքվող դետալներից (press-fit կոնստրուկցիա)։ Որպես նախագիծ՝ ես ընտրեցի բազմաթև, սիմետրիկ կոնստրուկցիան, որի առանձին տարրերը հագնում են իրար հատուկ ակոսների (slots) միջոցով՝ առանց սոսնձի կամ լրացուցիչ ամրակների օգտագործման։
 
-## Research
+---
 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+## 1. Նախագծի Սկիզբ և Պարամետրական Աղյուսակի (Spreadsheet) Ստեղծում
 
-> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+Եվ այսպես, սկսում ենք։ Երբ բացում ենք FreeCAD ծրագիրը, պետք է սեղմել **Create new…**՝ նոր նախագիծ ստեղծելու համար։
 
-## Useful links
+Նախքան բուն գծագրելուն անցնելը, կա մեկ շատ կարևոր կետ. ես ցանկանում եմ, որ իմ մոդելը լինի պարամետրական։ Դա նշանակում է, որ եթե հետագայում փոխվի օգտագործվող նյութի հաստությունը (օրինակ՝ 3 մմ-անոց ֆաներայի փոխարեն օգտագործեմ 4 մմ-անոց նյութ), ստիպված չլինեմ նորից գծել ամբողջ դետալը։ Դրա համար անհրաժեշտ է բոլոր չափերը պահել հատուկ աղյուսակում։ Եկեք ստեղծենք այդպիսի աղյուսակ.
 
-- [Jekyll](http://jekyll.org)
-- [Google](http://google.com)
-- [Markdown](https://en.wikipedia.org/wiki/Markdown)
+* Գնում ենք **Spreadsheet** բաժին և ընտրում **Create a new spreadsheet**։
+* Բացվում է աղյուսակ, որտեղ անհրաժեշտ է մուտքագրել պարամետրերի անունները, դրանց արժեքները և նկարագրությունները։
+* Աղյուսակում աշխատանքը կազմակերպելու համար **A սյունակում** գրեցի պարամետրի լրիվ անունը, **B սյունակում**՝ թվային արժեքը կամ բանաձևը, **C սյունակում**՝ հակիրճ կոդային անունը (Alias), իսկ **D սյունակում**՝ պարամետրի բացատրությունը։
+* Եթե աջ սեղմեք նոր գրված պարամետրի արժեքի վրա (B սյունակում) և սեղմեք **Properties…**, կբացվի թռուցիկ պատուհան։ **Alias** ներդիրում դուք պետք է մուտքագրեք կարճ անուն (short name), որով այս պարամետրը կկանչվի ապագայում։
+* Այնուհետև **Display unit** ներդիրում կարող եք մուտքագրել `mm` արժեքը (ես մուտքագրեցի `mm` արժեքը, քանի որ հետագայում դա կօգնի ստանալու իմ ուզած չափի 3D մոդել, իսկ անկյունների համար՝ `°`):
 
-## Code Example
+Եթե մուտքագրված է Alias, վանդակը ներկվում է կապույտ կամ դեղին գույնով, ինչը նշանակում է, որ բջջի արժեքը կարող է օգտագործվել որպես գլոբալ փոփոխական ամբողջ ծրագրում։ Սա նշանակում է, որ չներկված բջիջները պարզապես տեքստ են և ազդեցություն չունեն մոդելի վրա։ Պարամետրերի Alias-ների գրելն ու դրանց հետագա օգտագործումը պարզեցնելու համար ես դրանք դուրս եմ բերել C սյունակում՝ տեսանելի դարձնելու համար։
 
-Use the three backticks to separate code.
+---
 
-```
-// the setup function runs once when you press reset or power the board
-void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
-}
+## 2. 2D Էսքիզի Ստեղծում (Part Design և Sketcher)
 
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
-}
-```
+Աղյուսակը պատրաստ լինելուց հետո անցնում ենք մոդելավորմանը.
 
-## Gallery
+* Գնում ենք **Part Design** բաժին։
+* Ստեղծում ենք մարմին՝ սեղմելով **Create body** (մոդելի ծառում այն հայտնվում է որպես `Тело`)։
+* Այնուհետև ընտրում ենք **Create sketch**։
+* Մենք պետք է ընտրենք այն հարթությունը, որում ցանկանում ենք կատարել 2D գծագիր (իմ դեպքում դա `XY_Plane` հարթությունն է)։
+* Բացվում են էսքիզների (Sketcher) գործիքները։
 
-![](../images/sample-photo.jpg)
+Այժմ մենք Sketcher միջավայրում ենք և սկսում ենք գծել կոնստրուկցիայի **մեկ թևի** երկրաչափական կոնտուրը՝ ներառյալ ծայրային Y-աձև ճյուղավորումները և ներսի միացման ակոսները։
 
-## Video
+Գծագրին պարամետրական չափեր տալու համար ընտրում ենք երկու կետ կամ գիծ և սեղմում հեռավորությունը ֆիքսելու գործիքը (օրինակ՝ հորիզոնական կամ ուղղահայաց չափս)։ Հայտնվում է թռուցիկ պատուհան (Insert length), որտեղ մենք կարող ենք ձեռքով մուտքագրել արժեքը կամ սեղմել Length դաշտի աջ կողմում գտնվող փոքրիկ շրջանին՝ **Formula Editor** երկխոսության պատուհանը բացելու համար։ Այնտեղ մենք կարող ենք մուտքագրել պարամետրական արժեքը։ Փոփոխականների աղյուսակի անունը `Spreadsheet` է, իսկ ընտրվող պարամետրը, օրինակ, `al` (arm_len) կամ `sw` (slot_w)։ Հետևաբար, մենք պետք է մուտքագրենք `Spreadsheet.al` կամ `Spreadsheet.sw`։
 
-### From Vimeo
+OK սեղմելուց և բոլոր թռուցիկ պատուհանները փակելուց հետո ընտրված կետերի միջև հեռավորությունը կդառնա պարամետրական, ինչը նշանակում է, որ եթե աղյուսակում փոխեք արժեքը մեկ այլ թվով, գծագրի վրա կետերի միջև հեռավորությունը ավտոմատ կփոխվի նոր արժեքին համապատասխան։
 
-<iframe src="https://player.vimeo.com/video/10048961" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/10048961">Sound Waves</a> from <a href="https://vimeo.com/radarboy">George Gally (Radarboy)</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+Բոլոր պարամետրերն ու երկրաչափական սահմանափակումները (constraints) սահմանելուց հետո էսքիզի գույնը կփոխվի կանաչի, ինչը նշանակում է, որ այն լիովին պարամետրական է և ամբողջությամբ սահմանափակված (Fully Constrained)։
 
-### From Youtube
+---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jjNgJFemlC4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+## 3. 3D Մարմնի Ստեղծում (Pad), Polar Pattern և Կտրվածքներ (Cut)
 
-## 3D Models
+Երբ 2D էսքիզը պատրաստ է, այն պետք է վերածել եռաչափ ծավալային մարմնի.
 
-<div class="sketchfab-embed-wrapper"><iframe width="640" height="480" src="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915/embed" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+* Էսքիզից պինդ մարմին (solid object) ստեղծելու համար ընտրում ենք էսքիզը (`Sketch`) և օգտագործում **Pad** գործիքը (Pad a selected sketch)։
+* Երկարությունը (Length) սահմանում ենք հավասար Spreadsheet աղյուսակի `tck` (thickness) պարամետրի արժեքին (`Spreadsheet.tck`, որը 3,00 մմ է)։ Այսպիսով, մենք ստանում ենք դետալի մեկ եռաչափ թև։
 
-<p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-    <a href="https://sketchfab.com/models/658c8f8a2f3042c3ad7bdedd83f1c915?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Dita&#39;s Gown</a>
-    by <a href="https://sketchfab.com/francisbitontistudio?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Francis Bitonti Studio</a>
-    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-</p>
-</div>
+Այս պահին մոդելն ունի միայն մեկ թև, բայց ինձ անհրաժեշտ է, որ այն լինի բազմաթև սիմետրիկ կոնստրուկցիա։
+
+* Բազմաթև մոդել ստանալու համար մենք օգտագործում ենք **PolarPattern** գործիքը։ Նախ մոդելի ծառում ընտրում ենք ստացված `Pad`-ը, այնուհետև սեղմում ենք PolarPattern գործիքի վրա։
+* PolarPattern երկխոսության պատուհանում տարրերի քանակը (Occurrences) բանաձևի միջոցով սահմանում ենք հավասար `Spreadsheet.na` պարամետրին (որը 6 է), իսկ բևեռային անկյունը (Polar angle) թողնում ենք **360 աստիճան**։ Վերջում սեղմում ենք «OK»՝ բազմաթև մարմինը ստեղծելու համար։
+
+Այնուհետև անհրաժեշտ էր ստանալ կենտրոնական շեղանկյուն անցքը և հավաքման լրացուցիչ կտրվածքները։
+
+* Դրա համար ստեղծվել է երկրորդ օժանդակ մարմին (`Тело001`), որը պարունակում է կենտրոնական շեղանկյան (`diamond_size` և `diamond_width`) երկրաչափությունը։
+* Հիմնական մարմնից (`Тело`) այս ավելորդ հատվածը հանելու համար օգտագործվել է բուլյան հանման գործողությունը՝ **Cut**, որի արդյունքում մոդելի կենտրոնում առաջանում է ճշգրիտ շեղանկյուն անցք։
+
+Արդյունքում դուք ստանում եք լիովին պարամետրական 3D կոնստրուկցիա։ Ահա ստացված մոդելը, որը կարող է հեշտությամբ խմբագրվել աղյուսակի միջոցով։ Օրինակ՝ ես կարող եմ փոխել նյութի հաստությունը, թևերի քանակը, թևի երկարությունը, ակոսների լայնությունը կամ ճյուղավորման անկյունը, և ամբողջ 3D մոդելը վայրկյանների ընթացքում կվերակառուցվի՝ պատրաստ լինելով լազերային կտրման և հավաքման համար։
+
+---
+
+## Conclusion (Եզրակացություն)
+
+Ամփոփելով՝ այս շաբաթ ես խորությամբ ուսումնասիրեցի 3D պարամետրական նախագծումը **FreeCAD** ծրագրում։ Ես սովորեցի օգտագործել **Spreadsheet** աղյուսակը՝ գլոբալ փոփոխականներ և բանաձևեր ստեղծելու համար, կապել դրանք **Sketcher**-ի երկրաչափական չափերի հետ, ստեղծել ծավալային մարմիններ **Pad** գործիքով, բազմապատկել դրանք **PolarPattern**-ի միջոցով և կատարել բուլյան հանումներ (**Cut**)։ Այս փորձառությունն ինձ տվեց հստակ պատկերացում այն մասին, թե ինչպես կարելի է նախագծել ճկուն, հեշտ փոփոխվող և թվային արտադրության (լազերային կտրման) համար պատրաստ հավաքովի կոնստրուկցիաներ։
+
+---
+
+## Files (Ֆայլեր)
+
+* **FreeCAD** – `snowflake.fab,final.FCStd` (ամբողջական 3D պարամետրական մոդել և փոփոխականների աղյուսակ)
