@@ -1,7 +1,7 @@
 ---
 hide:
-  - navigation
-  - toc
+- navigation
+- toc
 ---
 
 <section class="hero">
@@ -35,6 +35,11 @@ hide:
     <img class="tile-img" src="images/week03.jpg" alt="">
     <span class="tile-week">Շաբաթ 3</span>
     <span class="tile-title">ԱԲ-ի ուսումնասիրություն</span>
+  </a>
+  <a class="tile" href="assignments/week04/">
+    <img class="tile-img" src="images/week04.jpg" alt="">
+    <span class="tile-week">Շաբաթ 4</span>
+    <span class="tile-title">3D Պարամետրական Մոդելավորում</span>
   </a>
 </div>
 </section>
